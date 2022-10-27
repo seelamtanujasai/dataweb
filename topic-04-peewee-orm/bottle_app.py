@@ -1,6 +1,6 @@
 from bottle import default_app, route, get, post, template, request, redirect
 
-from dataset_database import get_items, add_item, delete_item, update_item
+from peewee_database import get_items, add_item, delete_item, update_item
 
 @route('/')
 def get_index():
@@ -9,7 +9,7 @@ def get_index():
 @route('/list')
 def get_list():
     items = get_items()
-    return template("car_list.tpl", name="Kaushik", car_list=items)
+    return template("car_list.tpl", name="Tanuja", car_list=items)
 
 @post('/add')
 def post_add():
