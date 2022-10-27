@@ -1,17 +1,20 @@
 <html>
 <body>
-<h2>car list</h2>
+<h2> List of Cars </h2>
 <hr/>
 <table>
 % for item in car_list:
-  <tr>
-    <td>{{str(item['desc'])}}</td>
-    <td><a href="/edit/{{str(item['id'])}}">edit</a></td>
-    <td><a href="/delete/{{str(item['id'])}}">delete</a></td>
-  </tr>
+ <tr>
+<td> {{str(item['desc'])}} </td>
+<td> <a href="/edit/{{str(item['id'])}}">Edit</a> </td>
+<td> <a href="/delete/{{str(item['id'])}}">Delete</a> </td>
+ </tr>
 % end
 </table>
 <hr/>
-<a href="/add">Add new item...</a>
+<form action = "/add" method ="post">
+   <p> Add new Car : <input name = "description"/></p>
+   <p><button type ="submit"> Submit </button>
+</form>
 </body>
 </html>
