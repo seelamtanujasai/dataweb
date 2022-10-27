@@ -5,7 +5,7 @@
 <table>
 % for item in car_list:
  <tr>
-<td> {{str(item['desc'])}} </td>
+<td> {{str(item['description'])}} </td>
 <td> <a href="/edit/{{str(item['id'])}}">Edit</a> </td>
 <td> <a href="/delete/{{str(item['id'])}}">Delete</a> </td>
  </tr>
